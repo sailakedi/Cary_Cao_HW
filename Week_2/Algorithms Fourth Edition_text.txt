@@ -1,0 +1,212 @@
+ql Twn)
+\lgorithms
+
+OSUPRETEH aE. Dilek
+
+ROBERT SEDGEWICK | KEVIN WAYNE
+
+--- Page 1 ---
+
+
+This page intentionally left blank
+
+--- Page 2 ---
+
+
+Algorithms
+
+FOURTH EDITION
+
+--- Page 3 ---
+
+
+This page intentionally left blank
+
+--- Page 4 ---
+
+
+Algorithms
+
+FOURTH EDITION
+
+Robert Sedgewick
+and
+Kevin Wayne
+
+Princeton University
+
+vv Addison-Wesley
+
+Upper Saddle River, NJ * Boston ¢ Indianapolis * San Francisco
+New York * Toronto * Montreal * London * Munich * Paris * Madrid
+Capetown * Sydney * Tokyo + Singapore * Mexico City
+
+--- Page 5 ---
+
+
+Many of the designations used by manufacturers and sellers to distinguish their products are claimed as
+trademarks. Where those designations appear in this book, and the publisher was aware of a trademark
+claim, the designations have been printed with initial capital letters or in all capitals.
+
+The authors and publisher have taken care in the preparation of this book, but make no expressed or im-
+plied warranty of any kind and assume no responsibility for errors or omissions. No liability is assumed
+for incidental or consequential damages in connection with or arising out of the use of the information or
+programs contained herein.
+
+The publisher offers excellent discounts on this book when ordered in quantity for bulk purchases or
+special sales, which may include electronic versions and/or custom covers and content particular to your
+business, training goals, marketing focus, and branding interests. For more information, please contact:
+
+U.S. Corporate and Government Sales
+(800) 382-3419
+corpsales@pearsontechgroup.com
+
+For sales outside the United States, please contact:
+
+International Sales
+jnternational@pearson.com
+
+Visit us on the Web: informit.com/aw
+
+Cataloging-in-Publication Data is on file with the Library of Congress.
+
+Copyright © 2011 Pearson Education, Inc.
+
+All rights reserved. Printed in the United States of America. This publication is protected by copyright,
+and permission must be obtained from the publisher prior to any prohibited reproduction, storage in
+a retrieval system, or transmission in any form or by any means, electronic, mechanical, photocopying,
+recording, or likewise. For information regarding permissions, write to:
+
+Pearson Education, Inc.
+
+Rights and Contracts Department
+501 Boylston Street, Suite 900
+Boston, MA 02116
+
+Fax: (617) 671-3447
+
+ISBN-13: 978-0-321-57351-3
+
+ISBN-10: 0-321-57351-X
+
+Text printed in the United States on recycled paper at Courier in Westford, Massachusetts.
+First printing, March 2011
+
+--- Page 6 ---
+
+
+To Adam, Andrew, Brett, Robbie
+and especially Linda
+
+To Jackie and Alex
+
+
+--- Page 7 ---
+
+
+CONTENTS
+
+Preface. 2. 1 ee ee
+
+1 Fundamentals
+
+1.1
+1.2
+1.3
+
+3 Searching
+
+3.1
+3.2
+3.3
+3.4
+3.5
+
+vi
+
+Basic Programming Model
+Data Abstraction
+
+Bags, Queues, and Stacks
+Analysis of Algorithms
+Case Study: Union-Find
+
+Elementary Sorts
+Mergesort
+Quicksort
+Priority Queues
+
+Applications
+
+Symbol Tables
+Binary Search Trees
+Balanced Search Trees
+
+Hash Tables
+Applications
+
+--- Page 8 ---
+
+
+5 Strings
+5.1
+5.2
+5.3
+5.4
+5.5
+
+6 Context
+
+Undirected Graphs
+Directed Graphs
+Minimum Spanning Trees
+
+Shortest Paths
+
+String Sorts
+
+Tries
+
+Substring Search
+Regular Expressions
+
+Data Compression
+
+vii
+
+--- Page 9 ---
+
+
+vill
+
+PREFACE
+
+his book is intended to survey the most important computer algorithms in use today,
+and to teach fundamental techniques to the growing number of people in need of
+knowing them. It is intended for use as a textbook for a second course in computer
+science, after students have acquired basic programming skills and familiarity with computer
+systems. The book also may be useful for self-study or as a reference for people engaged in
+the development of computer systems or applications programs, since it contains implemen-
+tations of useful algorithms and detailed information on performance characteristics and
+clients. The broad perspective taken makes the book an appropriate introduction to the field.
+
+THE STUDY OF ALGORITHMS AND DATA STRUCTURES is fundamental to any computer-
+science curriculum, but it is not just for programmers and computer-science students. Every-
+one who uses a computer wants it to run faster or to solve larger problems. The algorithms
+in this book represent a body of knowledge developed over the last 50 years that has become
+indispensable. From N-body simulation problems in physics to genetic-sequencing problems
+in molecular biology, the basic methods described here have become essential in scientific
+research; from architectural modeling systems to aircraft simulation, they have become es-
+sential tools in engineering; and from database systems to internet search engines, they have
+become essential parts of modern software systems. And these are but a few examples—as the
+scope of computer applications continues to grow, so grows the impact of the basic methods
+covered here.
+
+Before developing our fundamental approach to studying algorithms, we develop data
+types for stacks, queues, and other low-level abstractions that we use throughout the book.
+Then we survey fundamental algorithms for sorting, searching, graphs, and strings. The last
+chapter is an overview placing the rest of the material in the book in a larger context.
+
+--- Page 10 ---
+
+
