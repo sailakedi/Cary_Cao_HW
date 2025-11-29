@@ -1,0 +1,15 @@
+version: '3.8'
+services:
+backend:
+build: ./backend
+container_name: realtime-backend
+environment:
+- TGI_URL=${TGI_URL}
+- TGI_API_KEY=${TGI_API_KEY}
+- WHISPER_MODEL=${WHISPER_MODEL}
+- VOICE_DEFAULT=default
+ports:
+- "8000:8000"
+volumes:
+- /tmp:/tmp
+restart: unless-stopped
